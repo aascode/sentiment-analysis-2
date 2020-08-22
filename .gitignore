@@ -1,4 +1,2 @@
 sent-venv
 .vscode
-test.py
-sentiment140-subset.csv
