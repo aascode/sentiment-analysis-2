@@ -1,4 +1,3 @@
-database\*
-
-sent-venv
+databases/*
+sent-venv/*
 .vscode
