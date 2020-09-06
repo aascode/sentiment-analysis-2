@@ -11,9 +11,9 @@ There are three main dimensions of word meaning shown by analysis studies:
 
 As represented as dimensions:
 
-- **x** --> Valence
-- **Y** --> Arousal
-- **Z** --> Dominance
+- **x** **⟷** **Valence**
+- **Y** **⟷** **Arousal**
+- **Z** **⟷** **Dominance**
 
 Through these three-dimensional categories was compared the **Wheel of emotions** by Robert Plutchik.
 To later be resolved with the categories that were previously deliberated by Sidejar ©.
