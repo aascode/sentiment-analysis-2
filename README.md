@@ -24,6 +24,6 @@ redirected to the Speech Recognition stage.
 
 ---
 
-## \*_Processing datasets_
+## **Processing datasets**
 
 ![processing_chartflow](https://github.com/Y4rd13/sentiment-analysis/blob/master/processing%20chartflow.png)
