@@ -1,4 +1,29 @@
-# **Sentiment Analyzer**
+# **Multi-modal Sentiment Analyzer**
+
+Multi-class LSTM neural network model (Long-Short-Term-Memory with softmax output).
+Built with Tensorflow 2.x.
+
+---
+
+## Datasets:
+
+Trained with the preprocessed-concatenation of seven datasets
+
+1. Emobank
+2. ISEAR
+3. Sentiment140 (1.6+ million tweets)
+4. NRC Emotion Intensity Lexicon v1
+5. NRC Emotion Lexicon Word-level v0.92
+6. NRC Hashtag Emotion Lexicon v0.2
+7. NRC VAD Lexicon
+
+## NLP tools
+
+- Stanza (lemmatization and polarities)
+- SpaCy (training : text categorization)
+- Flair (Polarities)
+- TextBlob (only Subjectivity)
+- NLTK (words, wordnet, stopwords, VADER)
 
 ## **Categories distribution**
 
