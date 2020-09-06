@@ -27,3 +27,15 @@ redirected to the Speech Recognition stage.
 ## **Processing datasets**
 
 ![processing_chartflow](https://github.com/Y4rd13/sentiment-analysis/blob/master/processing%20chartflow.png)
+
+---
+
+## Observations
+
+- flair can complement stanza values
+- if stanza value == 0, then assign the prediction from flair
+- flair should be a different tokens by predicction
+- e.g.: does not handles pressure
+- stanza == 0
+- flair == -1
+- flair == 0.98 == > -0.98 --> will mean the label {does not handles pressure}
