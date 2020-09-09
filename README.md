@@ -15,7 +15,7 @@ Trained with the preprocessed-concatenation of seven datasets
 4. NRC Emotion Intensity Lexicon v1
 5. NRC Emotion Lexicon Word-level v0.92
 6. NRC Hashtag Emotion Lexicon v0.2
-7. NRC VAD Lexicon
+7. [NRC VAD Lexicon](http://saifmohammad.com/WebPages/nrc-vad.html)
 
 ## NLP tools
 
