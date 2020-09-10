@@ -45,7 +45,7 @@ To later be resolved with the categories that were previously deliberated by Sid
 In this way, a better distribution was achieved at the time of preprocessing the data, where certain categories are merely
 redirected to the Speech Recognition stage.
 
-![categories_explaination](https://github.com/Y4rd13/sentiment-analysis/blob/master/categories.png)
+![categories_explaination](https://github.com/Y4rd13/sentiment-analysis/blob/master/png/categories.png)
 
 ---
 
