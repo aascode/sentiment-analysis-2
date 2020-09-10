@@ -49,12 +49,6 @@ redirected to the Speech Recognition stage.
 
 ---
 
-## **Processing datasets**
-
-![processing_chartflow](https://github.com/Y4rd13/sentiment-analysis/blob/master/processing%20chartflow.png)
-
----
-
 ## Observations
 
 - flair can complement stanza values
