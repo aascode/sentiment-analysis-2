@@ -10,7 +10,7 @@ from rest_framework.permissions import AllowAny
 from django.views.generic.base import TemplateView
 
 # category labels
-labels = ['confident', 'unconfident', 'pos_hp', 'neg_hp', 'interested',
+labels = ['confident', 'unconfident', 'handles pressure', 'cant handle pressure', 'interested',
           'uninsterested', 'happy', 'unhappy', 'friendly', 'unfriendly']
 
 label_dict = dict(zip(labels, range(1, len(labels) + 1)))
@@ -50,7 +50,7 @@ class Classification(APIView):
             pred = predict(label_dict, text, model)
             print('Prediction: {}'.format(pred))
 
-            return JsonResponse({'message': 'Prediction : ' + str(pred), 'code': 200, 'status': 'Success'})
+            return JsonResponse({'message': 'Prediction: ' + str(pred), 'code': 200, 'status': 'Success'})
         except Exception as e:
             print('email error:', e)
             return JsonResponse({'message': 'Something went wrong', 'code': 500, 'status': 'Error', 'error': str(e)})
