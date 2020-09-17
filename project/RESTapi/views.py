@@ -4,9 +4,10 @@ from django.http import JsonResponse
 
 import tensorflow as tf
 import numpy as np
-from tf.keras.models import load_model
 from tensorflow import keras
+from tensorflow.keras.models import load_model
 from rest_framework.permissions import AllowAny
+from django.views.generic.base import TemplateView
 
 # category labels
 labels = ['confident', 'unconfident', 'pos_hp', 'neg_hp', 'interested',
@@ -15,11 +16,12 @@ labels = ['confident', 'unconfident', 'pos_hp', 'neg_hp', 'interested',
 label_dict = dict(zip(labels, range(1, len(labels) + 1)))
 
 # Load the pretrained model
-model = tf.keras.load_model('models\\h5\\words\\model.h5')
+model = load_model(
+    'C:/Users/Acer/Documents/coding/Upwork/Peter Gretale/models/h5/words/model.h5')
 
 
 def preprocess(x, padding_shape=30):
-    return np.array([ord(i.lower() - ord('a') + 1 if i != ' ' else 0 for i in list(x))] + ([0] * (padding_shape - len(x))), dtype=int)
+    return np.array([ord(i.lower()) - ord('a')+1 if i != ' ' else 0 for i in list(x)] + ([0] * (padding_shape - len(x))), dtype=int)
 
 
 def predict(d: dict, s: str, model):
@@ -45,10 +47,14 @@ class Classification(APIView):
             text = request.POST.get('word')
 
             # calling prediction function
-            pred = predict(label_dict, model)
+            pred = predict(label_dict, text, model)
             print('Prediction: {}'.format(pred))
 
             return JsonResponse({'message': 'Prediction : ' + str(pred), 'code': 200, 'status': 'Success'})
         except Exception as e:
             print('email error:', e)
             return JsonResponse({'message': 'Something went wrong', 'code': 500, 'status': 'Error', 'error': str(e)})
+
+
+class Home(TemplateView):
+    template_name = ('home.html')
