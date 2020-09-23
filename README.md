@@ -41,20 +41,8 @@ As represented as dimensions:
 - **Z** **⟷** **Dominance**
 
 Through these three-dimensional categories was compared the **Wheel of emotions** by Robert Plutchik.
-To later be resolved with the categories that were previously deliberated by Sidejar ©.
+To later be resolved with the categories that were previously deliberated.
 In this way, a better distribution was achieved at the time of preprocessing the data, where certain categories are merely
 redirected to the Speech Recognition stage.
 
 ![categories_explaination](https://github.com/Y4rd13/sentiment-analysis/blob/master/png/categories.png)
-
----
-
-## Observations
-
-- flair can complement stanza values
-- if stanza value == 0, then assign the prediction from flair
-- flair should be a different tokens by predicction
-- e.g.: does not handles pressure
-- stanza == 0
-- flair == -1
-- flair == 0.98 == > -0.98 --> will mean the label {does not handles pressure}
