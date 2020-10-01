@@ -12,6 +12,8 @@ from django.views.generic.base import TemplateView
 # category labels
 labels = ['confident', 'unconfident', 'handles pressure', 'cant handle pressure', 'interested',
           'uninsterested', 'happy', 'unhappy', 'friendly', 'unfriendly']
+#labels = ['confident', 'unconfident', 'handles pressure', 'cant handle pressure', 'interested', 'uninsterested', 'happy', 'unhappy', 'friendly', 'unfriendly', 'POS']
+
 
 label_dict = dict(zip(labels, range(1, len(labels) + 1)))
 
@@ -32,6 +34,7 @@ def predict(d: dict, s: str, model):
     for k, v in d.items():
         if v == ID:
             return k
+
     return 'unclassified'
 
 
