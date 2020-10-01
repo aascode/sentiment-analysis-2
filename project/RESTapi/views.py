@@ -21,22 +21,21 @@ model = load_model(
 
 
 def preprocess(x, padding_shape=30):
-    return np.array([ord(i.lower()) - ord('a')+1 if i != ' ' else 0 for i in list(x)] + ([0] * (padding_shape - len(x))), dtype=int)
+    return np.array([ord(i.lower()) - ord('a')+1 if not i.isdigit() and i != ' ' else 0 for i in list(x)] + ([0] * (padding_shape - len(x))), dtype=int)
 
 
 def predict(d: dict, s: str, model):
     token = preprocess(s)
     output = model.predict(np.array([token]))
-    Id = int(tf.keras.backend.argmax(output))
+    ID = int(tf.keras.backend.argmax(output))
 
     for k, v in d.items():
-        if v == Id:
+        if v == ID:
             return k
     return 'unclassified'
 
+
 # Classification call class
-
-
 class Classification(APIView):
 
     permission_classes = (AllowAny,)
