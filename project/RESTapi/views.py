@@ -12,14 +12,12 @@ from django.views.generic.base import TemplateView
 # category labels
 labels = ['confident', 'unconfident', 'handles pressure', 'cant handle pressure', 'interested',
           'uninsterested', 'happy', 'unhappy', 'friendly', 'unfriendly']
-#labels = ['confident', 'unconfident', 'handles pressure', 'cant handle pressure', 'interested', 'uninsterested', 'happy', 'unhappy', 'friendly', 'unfriendly', 'POS']
-
 
 label_dict = dict(zip(labels, range(1, len(labels) + 1)))
 
 # Load the pretrained model
-model = load_model(
-    'C:/Users/Acer/Documents/coding/Upwork/Peter Gretale/models/h5/words/model.h5')
+model_path = 'C:/Users/Acer/Documents/coding/Upwork/Peter Gretale/models/h5/words/model_1000.h5'
+model = load_model(model_path)
 
 
 def preprocess(x, padding_shape=30):
